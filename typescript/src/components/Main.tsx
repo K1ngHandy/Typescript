@@ -85,6 +85,18 @@ function Main() {
         year: 2025
     };
     console.log('Car', car);
+    // type inference
+    car.type = 'Ford';
+    // console.log(car.type = 2); // type 'number' is not assignable to type 'string'
+    console.log('Car:', car);
+
+    // optional properties
+    const car2: { type: string, mileage?: number } = {
+        // Error: property 'mileage' is missing in type '{}' but required in type '{}'
+        type: 'Toyota'
+    };
+    car2.mileage = 2000;
+    console.log('Car2:', car2);
 
     return (
         <>
