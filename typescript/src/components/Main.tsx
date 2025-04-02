@@ -98,6 +98,12 @@ function Main() {
     car2.mileage = 2000;
     console.log('Car2:', car2);
 
+    // index signatures, used without a defined list of properties
+    const nameAgeMap: { [index: string]: number } = {};
+    nameAgeMap.Jack = 25;
+    // nameAgeMap.Mark = "Fifty"; // Error: type 'string' is not assignable to type 'number'
+    console.log('Name-Age:', nameAgeMap);
+
     return (
         <>
             <h2 className="first-name">{firstName}</h2>
