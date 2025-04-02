@@ -78,6 +78,14 @@ function Main() {
     const [s, t] = graph2;
     console.log('Graph 2:', s, t);
 
+    // Object types
+    const car: { type: string, model: string, year: number } = {
+        type: "Toyota",
+        model: "Corolla", 
+        year: 2025
+    };
+    console.log('Car', car);
+
     return (
         <>
             <h2 className="first-name">{firstName}</h2>
